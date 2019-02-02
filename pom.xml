@@ -22,7 +22,7 @@
             <id>dev</id>
             <properties>
                 <profileActive>dev</profileActive>
-                <persist_dataSource_url>jdbc:oracle:thin:@127.0.0.1:11521:bluedb</persist_dataSource_url>
+                <persist_dataSource_url>jdbc:mysql://127.0.0.1:3306/git?characterEncoding=utf8&amp;useSSL=true&amp;createDatabaseIfNotExist=true&amp;serverTimezone=GMT&amp;nullNamePatternMatchesAll=true</persist_dataSource_url>
                 <persist_dataSource_username>root</persist_dataSource_username>
                 <persist_dataSource_password>root</persist_dataSource_password>
             </properties>
@@ -57,15 +57,17 @@
         </dependency>
 
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.1.0</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.0</version>
         </dependency>
+
     </dependencies>
 
     <build>
